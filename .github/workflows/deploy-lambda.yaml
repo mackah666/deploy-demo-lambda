@@ -47,4 +47,4 @@ jobs:
       - name: default deploy
         run: |
           ls -al
-          aws lambda update-function-code --function-name  location-service --zip-file fileb://location-service.zip
+          aws lambda update-function-code --function-name  location-service --zip-file fileb://location-service-v${LATEST_VERSION}.zip
