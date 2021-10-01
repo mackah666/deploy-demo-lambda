@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.1...v1.0.2) (2021-10-01)
+
+
+### Bug Fixes
+
+* exported the env variable ([91b9192](https://github.com/mackah666/deploy-demo-lambda/commit/91b91925f0c7d23d0b691a1b0f0b67d3f1bbb0eb))
+
 ## [1.0.1](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.0...v1.0.1) (2021-10-01)
 
 
