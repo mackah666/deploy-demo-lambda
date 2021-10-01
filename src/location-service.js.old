@@ -1,0 +1,66 @@
+// Rewrite language and company params as path.
+const axios = require('axios');
+
+exports.handler = function (event, context, callback) {
+  const company = event.pathParameters.company.toLowerCase();
+  const url = getUrl(
+    company,
+    event.pathParameters.language,
+    event.multiValueQueryStringParameters.term[0],
+  );
+
+  const config = {
+    method: 'get',
+    url,
+    headers: {
+      'Content-Type': 'application/json;',
+    },
+  };
+  let formattedData;
+  axios(config)
+    .then((json) => {
+      formattedData = formatData(company, json.data);
+
+      callback(null, {
+        statusCode: 200,
+        body: JSON.stringify(formattedData),
+      });
+    })
+    .catch((error) => {
+      callback(error);
+    });
+  return formattedData;
+};
+function getUrl(company, langcode, term) {
+  if (company === 'cot') {
+    return (
+      `https://www.cottages.com/HoseasonsRequestHandler.ashx?method=SEARCH--NODE-SEARCH&&websiteId=18396&&node1=rhs1%2Crhs2%2Crhs3%2Crhs5%2Caonb&term=${
+        encodeURIComponent(term)}`
+    );
+  }
+  return (
+    `https://www.novasol.de/autosuggest/${
+      company
+    }/${
+      langcode
+    }/?term=${
+      encodeURIComponent(term)}`
+  );
+}
+function formatData(company, data) {
+  const formattedData = [];
+  if (company === 'cot') {
+    for (let i = 0; i < data[0].Records.length; i++) {
+      formattedData.push({
+        id: data[0].Records[i].RecordID,
+        name: data[0].Records[i].DisplayText,
+        link: data[0].Records[i].Link,
+      });
+    }
+  } else {
+    for (let i = 0; i < data.length; i++) {
+      formattedData.push({ id: data[i].id, name: data[i].name });
+    }
+  }
+  return formattedData;
+}
