@@ -46,7 +46,6 @@ jobs:
 
       - name: default deploy
         run: |
-          ls -al
           LATEST_VERSION=$(<version.txt)
           aws s3 cp location-service-v${LATEST_VERSION}.zip s3://mackah666-s3-bucket/lambda/location-service-v${LATEST_VERSION}.zip
           aws lambda update-function-code --function-name  location-service --zip-file fileb://location-service-v${LATEST_VERSION}.zip
