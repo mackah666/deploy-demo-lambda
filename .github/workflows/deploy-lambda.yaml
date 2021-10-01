@@ -41,7 +41,7 @@ jobs:
           CI: true
       - name: zip
         run: |
-          echo $LATEST_VERSION
+          echo "$LATEST_VERSION"
           cd dist
           zip -r ../location-service.zip .
 
