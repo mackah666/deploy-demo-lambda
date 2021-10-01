@@ -3,16 +3,12 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "build": "esbuild --platform=node --target=node14 --outdir=dist ./src/*.js && mkdir dist/node_modules && cp -R ./node_modules/** ./dist/node_modules"
+        "build": "mkdir dist && cp src/*.js dist && mkdir dist/node_modules && cp -R ./node_modules/** ./dist/node_modules"
     },
     "engines": {
-        "node": "14.17.5"
+        "node": ">=14.17.5"
     },
     "dependencies": {
         "axios": ">=0.21.2"
-    },
-    "devDependencies": {
-        "esbuild": "^0.13.3"
-
     }
 }
