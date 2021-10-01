@@ -38,7 +38,8 @@ jobs:
           CI: true
       - name: zip
         run: |
-          zip -r location-service.zip ./dist/**
+          cd dist
+          zip -r location-service.zip .
       #   uses: montudor/action-zip@v0.1.0
       #   with:
       #     # args: zip -qq -r ./location-service.zip ./dist/**
