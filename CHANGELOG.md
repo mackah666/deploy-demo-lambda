@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.0...v1.0.1) (2021-10-01)
+
+
+### Bug Fixes
+
+* added environment variable for the latest semantic-release version ([31892a4](https://github.com/mackah666/deploy-demo-lambda/commit/31892a4f9e0aa85298e83760b9f95e4bf92f91dc))
+
 # 1.0.0 (2021-10-01)
 
 
