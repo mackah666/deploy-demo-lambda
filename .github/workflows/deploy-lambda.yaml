@@ -40,11 +40,12 @@ jobs:
           CI: true
       - name: zip semantic version 
         run: |
-          export LATEST_VERSION=$(<version.txt)
+          LATEST_VERSION=$(<version.txt)
           cd dist
           zip -r ../location-service-v${LATEST_VERSION}.zip .
 
       - name: default deploy
         run: |
           ls -al
+          LATEST_VERSION=$(<version.txt)
           aws lambda update-function-code --function-name  location-service --zip-file fileb://location-service-v${LATEST_VERSION}.zip
