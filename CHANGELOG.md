@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mackah666/deploy-demo-lambda/compare/v1.1.2...v1.2.0) (2021-10-01)
+
+
+### Features
+
+* updated msg ([098f288](https://github.com/mackah666/deploy-demo-lambda/commit/098f288a627a2e16d5efa92db912d608115689a1))
+
 ## [1.1.2](https://github.com/mackah666/deploy-demo-lambda/compare/v1.1.1...v1.1.2) (2021-10-01)
 
 
