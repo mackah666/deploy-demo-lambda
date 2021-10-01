@@ -34,11 +34,13 @@ jobs:
           npm ci
           npm run build --if-present
           npx semantic-release
-          cat version.txt
+          # cat version.txt
+          LATEST_VERSION=$(cat version.txt)
         env:
           CI: true
       - name: zip
         run: |
+          echo $LATEST_VERSION
           cd dist
           zip -r ../location-service.zip .
 
