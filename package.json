@@ -3,10 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "clean": "rm -R -f dist",
-        "check": "npx prettier --check .",
-        "format": "npx prettier --write .",
-        "build": "esbuild --platform=node --target=node14 --outdir=dist ./src/*.js && mkdir dist/node_modules && cp -R ./node_modules/** ./dist/node_modules",
+        "build": "esbuild --platform=node --target=node14 --outdir=dist ./src/*.js && mkdir dist/node_modules && cp -R ./node_modules/** ./dist/node_modules"
     },
     "engines": {
         "node": "14.17.5"
