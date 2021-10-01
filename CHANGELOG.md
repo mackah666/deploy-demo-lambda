@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.10...v1.0.11) (2021-10-01)
+
+
+### Bug Fixes
+
+* update update-function-code to use versioned zip file ([950a537](https://github.com/mackah666/deploy-demo-lambda/commit/950a537a056f57d8c76529195abc8d75de193567))
+
 ## [1.0.10](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.9...v1.0.10) (2021-10-01)
 
 
