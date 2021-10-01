@@ -2,7 +2,7 @@ exports.handler = async (event) => {
     // TODO implement
     const response = {
         statusCode: 200,
-        body: JSON.stringify('Hello Awaze from Location Service'),
+        body: JSON.stringify('Hello Awaze from Manchester'),
     };
     return response;
 };
