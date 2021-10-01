@@ -30,10 +30,10 @@ jobs:
           ls -al
         env:
           CI: true
-      # - name: zip
-      #   uses: montudor/action-zip@v0.1.0
-      #   with:
-      #     args: zip -qq -r ./bundle.zip ./
+      - name: zip
+        uses: montudor/action-zip@v0.1.0
+        with:
+          args: zip -qq -r ./location-service.zip ./dist/**
       # - name: default deploy
       #   uses: appleboy/lambda-action@master
       #   with:
