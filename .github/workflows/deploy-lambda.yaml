@@ -17,7 +17,7 @@ jobs:
         node-version: [14.*]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -35,11 +35,11 @@ jobs:
         with:
           # args: zip -qq -r ./location-service.zip ./dist/**
           args: zip -qq -r ./location-service.zip . -i ./dist/**
-      # - name: default deploy
-      #   uses: appleboy/lambda-action@master
-      #   with:
-      #     aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws_region: eu-west-1
-      #     function_name: my-function
-      #     zip_file: bundle.zip
+      - name: default deploy
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: us-east-2
+          function_name: location-service
+          zip_file: location-service.zip
