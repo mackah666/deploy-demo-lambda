@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.14...v1.1.0) (2021-10-01)
+
+
+### Features
+
+* added upload to s3 bucket ([7cd1879](https://github.com/mackah666/deploy-demo-lambda/commit/7cd1879bb55397aa335c523e228165a5baaa9c1a))
+
 ## [1.0.14](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.13...v1.0.14) (2021-10-01)
 
 
