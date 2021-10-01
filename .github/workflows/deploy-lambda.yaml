@@ -28,12 +28,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and build
+      - name: npm install and build semantic-release
         run: |
           npm ci
           npm run build --if-present
-
-          ls -al
+          npx semantic-release
+          cat version.txt
         env:
           CI: true
       - name: zip
