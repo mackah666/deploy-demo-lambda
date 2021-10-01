@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.11...v1.0.12) (2021-10-01)
+
+
+### Bug Fixes
+
+* environment not available in the next step, therefore using export ([37f13d4](https://github.com/mackah666/deploy-demo-lambda/commit/37f13d4dbcce6dfbaf56532139c26edf65722468))
+
 ## [1.0.11](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.10...v1.0.11) (2021-10-01)
 
 
