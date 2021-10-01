@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mackah666/deploy-demo-lambda/compare/v1.1.0...v1.1.1) (2021-10-01)
+
+
+### Bug Fixes
+
+* removed ls -al from the pipeline ([1237f8a](https://github.com/mackah666/deploy-demo-lambda/commit/1237f8aef1f36f2c9e78ef24db9a91d57ad31180))
+
 # [1.1.0](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.14...v1.1.0) (2021-10-01)
 
 
