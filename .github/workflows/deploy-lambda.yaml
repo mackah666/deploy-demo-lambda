@@ -40,7 +40,7 @@ jobs:
           CI: true
       - name: zip semantic version 
         run: |
-          LATEST_VERSION=$(<version.txt)
+          export LATEST_VERSION=$(<version.txt)
           cd dist
           zip -r ../location-service-v${LATEST_VERSION}.zip .
 
