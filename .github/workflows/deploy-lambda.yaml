@@ -14,8 +14,7 @@ jobs:
     name: build and deploy lambda
     strategy:
       matrix:
-        node-version: [14.*],
-        lambda-name: ["location-service"]
+        node-version: [14.*]
     runs-on: ubuntu-latest
     env:
       # AWS_DEFAULT_REGION: us-east-1
@@ -40,8 +39,8 @@ jobs:
       - name: zip
         run: |
           cd dist
-          zip -r ../${{ matrix.lambda-name }}.zip .
+          zip -r ../location-service.zip .
 
       - name: default deploy
         run: |
-          aws lambda update-function-code --function-name  ${{ matrix.lambda-name }} --zip-file fileb://${{ matrix.lambda-name }}.zip
+          aws lambda update-function-code --function-name  location-service --zip-file fileb://location-service.zip
