@@ -35,7 +35,7 @@ jobs:
           npm run build --if-present
           npx semantic-release
           # cat version.txt
-          LATEST_VERSION=$(cat version.txt)
+          export LATEST_VERSION=$(cat version.txt)
         env:
           CI: true
       - name: zip
