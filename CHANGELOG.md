@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.12...v1.0.13) (2021-10-01)
+
+
+### Bug Fixes
+
+* initialise env close to where it is going to be used ([f6e8e25](https://github.com/mackah666/deploy-demo-lambda/commit/f6e8e252ef5c7f747fda88d399dc12a08eb77f65))
+
 ## [1.0.12](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.11...v1.0.12) (2021-10-01)
 
 
