@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.4...v1.0.5) (2021-10-01)
+
+
+### Bug Fixes
+
+* testing env variable ([843d428](https://github.com/mackah666/deploy-demo-lambda/commit/843d4288eded34dd4089b27f6ffc644a52ee079a))
+
 ## [1.0.4](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.3...v1.0.4) (2021-10-01)
 
 
