@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.13...v1.0.14) (2021-10-01)
+
+
+### Bug Fixes
+
+* made a minor change to the code ([6279d46](https://github.com/mackah666/deploy-demo-lambda/commit/6279d464c090fc5acf4e5e99ed990edffa89e743))
+
 ## [1.0.13](https://github.com/mackah666/deploy-demo-lambda/compare/v1.0.12...v1.0.13) (2021-10-01)
 
 
