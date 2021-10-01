@@ -35,7 +35,10 @@ jobs:
           npm run build --if-present
           npx semantic-release
           cat version.txt
-          
+    
+          LATEST_VERSION=$(<version.txt)
+
+          echo "$LATEST_VERSION"
   
         env:
           CI: true
