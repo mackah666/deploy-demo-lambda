@@ -37,10 +37,12 @@ jobs:
         env:
           CI: true
       - name: zip
-        uses: montudor/action-zip@v0.1.0
-        with:
-          # args: zip -qq -r ./location-service.zip ./dist/**
-          args: zip -qq -r location-service.zip . -i dist/**
+        run: |
+          zip -r location-service.zip ./dist/**
+      #   uses: montudor/action-zip@v0.1.0
+      #   with:
+      #     # args: zip -qq -r ./location-service.zip ./dist/**
+      #     args: zip -qq -r location-service.zip . -i dist/**
       - name: default deploy
         run: |
           ls -al
