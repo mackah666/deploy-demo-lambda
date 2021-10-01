@@ -45,6 +45,9 @@ jobs:
 
       - name: default deploy
         run: |
+          
           LATEST_VERSION=$(<version.txt)
           echo "$LATEST_VERSION"
+          cp location-service.zip location-service-${LATEST_VERSION}.zip
+          ls -al
           aws lambda update-function-code --function-name  location-service --zip-file fileb://location-service.zip
