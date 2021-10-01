@@ -16,6 +16,12 @@ jobs:
       matrix:
         node-version: [14.*]
     runs-on: ubuntu-latest
+        env:
+      # AWS_DEFAULT_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: us-east-2
+      TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -38,6 +44,3 @@ jobs:
       - name: default deploy
         run: |
           ls -al
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: us-east-2
